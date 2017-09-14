@@ -117,3 +117,22 @@ const letterReverse = (string) => {
 	return finalString;
 };
 letterReverse("Now I know what a TV dinner feels like");
+
+
+// Round 6
+
+// Write a function longest that accepts a single argument, an array of strings. The method should
+// return the longest word in the array. In case of a tie, the method should return the word that
+// appears first in the array.
+
+const longest = (strArr) => {
+	let longestString = '';
+	for (let i = 0; i < strArr.length; i++){
+		if(strArr[i].length > longestString.length){
+			longestString = strArr[i];
+		}
+	};
+	return longestString;
+};
+longest(["oh", "good", "grief"]);
+longest(["Nothing" , "takes", "the", "taste", "out", "of", "peanut", "butter", "quite", "like", "unrequited", "love"]);

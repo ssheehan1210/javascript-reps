@@ -136,3 +136,16 @@ const longest = (strArr) => {
 };
 longest(["oh", "good", "grief"]);
 longest(["Nothing" , "takes", "the", "taste", "out", "of", "peanut", "butter", "quite", "like", "unrequited", "love"]);
+
+
+// Final Round
+
+// Write a function, called repMaster, that accepts two arguments, input and a function.
+// Input should be able to be used with the function. The function used as an argument must return a string.
+// repMaster should take the result of the string, passed as an argument to the argument function,
+// and return this result with ' proves that I am the rep MASTER!' concatenated to it.
+
+const repMaster = (input, someFunction) => {
+	console.log(someFunction(input) + " proves that I am the rep MASTER!");
+};
+repMaster("Now I know what a TV dinner feels like", wordReverse);

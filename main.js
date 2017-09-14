@@ -97,3 +97,23 @@ const wordReverse = (string) => {
 	return newString;
 };
 wordReverse("Now I know what a TV dinner feels like");
+
+
+// Round 5
+
+const letterReverse = (string) => {
+	let newString = "";
+	let finalString = "";
+	let stringArray = string.split('');
+	let reversedStringArray = stringArray.reverse();
+	for (i = 0; i < reversedStringArray.length; i++){
+		newString = newString + reversedStringArray[i];
+	};
+	let newestStringArray = newString.split(' ');
+	let reversedNewestStringArray = newestStringArray.reverse();
+	for (x = 0; x < reversedNewestStringArray.length; x++){
+		finalString = finalString + " " + reversedNewestStringArray[x];
+	};
+	return finalString;
+};
+letterReverse("Now I know what a TV dinner feels like");

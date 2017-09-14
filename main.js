@@ -34,3 +34,43 @@ const transmogrifier = (firstNumber, secondNumber, thirdNumber) => {
 transmogrifier(5, 4, 3);
 transmogrifier(13, 12, 5);
 transmogrifier(42, 13, 7);
+
+
+// Round 3
+
+// Write a function called toonify that takes two parameters, accent and sentence.
+	// If accent is the string "daffy", return a modified version of sentence with all "s" replaced with "th".
+	// If the accent is "elmer", replace all "r" with "w".
+	// Feel free to add your own accents as well!
+	// If the accent is not recognized, just return the sentence as-is.
+
+const toonify = (accent, sentence) => {
+	let sentenceArray = [];
+	let newSentence = "";
+	if (accent === "daffy"){
+		sentenceArray = sentence.split('');
+		for (i = 0; i < sentenceArray.length; i++){
+			if (sentenceArray[i] === "s"){
+				sentenceArray[i] = "th";
+			}
+		};
+		for (x = 0; x < sentenceArray.length; x++){
+			newSentence = newSentence + sentenceArray[x];
+		};
+		console.log(newSentence);
+	} else if (accent === "elmer"){
+		sentenceArray = sentence.split('');
+		for (i = 0; i < sentenceArray.length; i++){
+			if (sentenceArray[i] === "r"){
+				sentenceArray[i] = "w";
+			}
+		};
+		for (x = 0; x < sentenceArray.length; x++){
+			newSentence = newSentence + sentenceArray[x];
+		};
+		console.log(newSentence);
+	} else {
+		console.log(sentence);
+	}
+};
+toonify("daffy", "so you smell like sausage");
